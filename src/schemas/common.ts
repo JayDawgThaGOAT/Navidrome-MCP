@@ -124,7 +124,7 @@ export const SearchAlbumsSchema = EnhancedSearchSchema.extend({
 // unfiltered artists.
 const ArtistUnsupportedFilterSchema = z.undefined(
   'search_artists does not filter by tag or year. Use search_albums or search_songs for tag-filtered lookups, and list_tag_values for the tag values.',
-);
+).optional();
 
 export const SearchArtistsSchema = EnhancedSearchSchema.extend({
   genre: ArtistUnsupportedFilterSchema,
